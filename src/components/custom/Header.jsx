@@ -10,8 +10,10 @@ const Header = () => {
       <img src='./logo.png' width={300} height={300} />
       {
         isSignedIn ? 
-        <div>
-          <Button>Dashboard</Button>
+        <div className='flex gap-5 items-center'>
+          <Link to={'/dashboard'}>
+          <Button variant="outline">Dashboard</Button>
+          </Link>
           <UserButton />
         </div>:
       <Link to={'/auth/sign-in'}>
